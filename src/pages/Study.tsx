@@ -14,7 +14,7 @@ const Study = () => {
         </div>
         <Link to={"/study"}>study</Link>
       </div>
-      <div className="bg-slate-100 rounded-xl w-[90vw] h-[89vh] flex-col text-center mx-2 mr-7 p-5 max-mobile:mr-2 max-mobile:w-[97vw]">
+      <div className="bg-slate-100 rounded-xl w-[90vw] h-[87vh] flex-col text-center mx-2 mr-7 mt-2 p-5 max-mobile:mr-2 max-mobile:w-[97vw]">
         Study
       </div>
     </div>
