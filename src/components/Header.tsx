@@ -1,10 +1,36 @@
 import { GoZap, GoGlobe } from "react-icons/go";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Modal from "./Modal";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const [toggle, setToggle] = useState(false);
+
+  const modalHandler = () => {
+    setToggle(!toggle);
+  };
+
   return (
-    <div className="bg-white flex p-3 justify-between items-center text-3xl">
-      <span className="[100%]"><GoZap/></span>
-      <span className="[100%]"><GoGlobe/></span>
+    <div className="flex px-9 py-3 max-mobile:p-3 justify-between items-center text-4xl">
+      <span
+        className="[100%] cursor-pointer"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        <GoZap alt="logo" />
+      </span>
+      <span className="[100%] cursor-pointer" onClick={() => modalHandler()}>
+        <GoGlobe alt="menu" />
+      </span>
+      {toggle === false ? (
+        <></>
+      ) : (
+        <>
+          <Modal modalHandler={modalHandler} />
+        </>
+      )}
     </div>
   );
 };
