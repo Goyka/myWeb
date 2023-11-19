@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Modal = ({ modalHandler }: any) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-20">
-      <div className="bg-white text-gray-800 rounded-lg flex flex-col gap-1 items-center px-[20px] w-[345px] h-[235px] font-semibold">
+      <div className="bg-white text-gray-800 rounded-lg flex flex-col gap-1 items-center px-[20px] w-[328px] h-[226px] font-semibold">
         <Link to={"/admin"}>
           <span className="text-gray-500 rounded-lg text-xs cursor-pointer">
             ❋

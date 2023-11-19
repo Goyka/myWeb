@@ -1,7 +1,7 @@
+import React, { useState } from "react";
 import { GoZap, GoGlobe } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import Modal from "./Modal";
+const Modal = React.lazy(() => import("./Modal"));
 
 const Header = () => {
   const navigate = useNavigate();

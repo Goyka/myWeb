@@ -24,9 +24,10 @@ const Admin = () => {
     }
     setAdminCode("");
     setPassword("");
+    navigate("/");
   };
   return (
-    <div className="flex flex-col justify-center items-center h-[77vh] gap-1.5 font-semibold">
+    <div className="flex flex-col justify-center items-center w-[96vw] h-[77vh] gap-1.5 text-sm font-semibold">
       <label htmlFor="id">관리자 코드</label>
       <input
         type="text"
