@@ -7,7 +7,7 @@ function App() {
       <div className="h-[7vh] w-[100%] my-2 px-3">
         <Header />
       </div>
-      <div className="h-[40vh] px-2">
+      <div className="h-[40vh] px-2 fixed">
         <Outlet />
       </div>
     </div>

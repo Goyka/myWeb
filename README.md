@@ -2,10 +2,12 @@
 
 ReactJS 18
 TypeScript
-Vite
-Tailwind CSS
 React-router-dom
-React-Query
+React-Querys
+Vite
+Firebase
+Vercel
+Tailwind CSS
 
 ### Feature
 
