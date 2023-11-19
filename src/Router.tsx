@@ -3,6 +3,8 @@ import App from "./App";
 import Home from "./pages/Home";
 import Study from "./pages/Study";
 import Proj from "./pages/Proj";
+import Admin from "./pages/Admin";
+import AddPost from "./pages/AddPost";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: "/project",
         element: <Proj />,
+      },
+      {
+        path: "/admin",
+        element: <Admin />,
+      },
+      {
+        path: "/post",
+        element: <AddPost />,
       },
     ],
   },
