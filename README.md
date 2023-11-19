@@ -1,3 +1,5 @@
+<img width="1263" alt="sam" src="https://github.com/Goyka/myWeb/assets/112574979/8dd96e55-c5e3-46db-9846-02021a054b5f">
+
 ### 🌐 myWeb
 <p>
 퍼블리싱과 기술 수련을 위해 개발하는 사적인 Web App
@@ -12,6 +14,7 @@
 <img src="https://img.shields.io/badge/React Router-CA4245?style=flat&logo=React Router&logoColor=white"/>
 <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat&logo=Tailwind CSS&logoColor=white"/>
 </p>
+
 
 ### 🧩 Feature
 <p>
