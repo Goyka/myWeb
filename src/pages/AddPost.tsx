@@ -32,29 +32,28 @@ const AddPost = () => {
     if (title === "" && content === "") {
       return;
     }
-
     try {
       if (category === "home") {
-        const res = await addDoc(collection(db, "home"), {
+        await addDoc(collection(db, "home"), {
           title,
           content,
           createdAt: Date.now(),
         });
-        console.log(res);
+        navigate("/");
       } else if (category === "project") {
-        const res = await addDoc(collection(db, "project"), {
+        await addDoc(collection(db, "project"), {
           title,
           content,
           createdAt: Date.now(),
         });
-        console.log(res);
+        navigate("/project");
       } else {
-        const res = await addDoc(collection(db, "study"), {
+        await addDoc(collection(db, "study"), {
           title,
           content,
           createdAt: Date.now(),
         });
-        console.log(res);
+        navigate("/study");
       }
     } catch (error) {
       console.error(error);

@@ -27,6 +27,11 @@ const Home = () => {
         )}
       </div>
       <div className="bg-slate-50 rounded-xl w-[88vw] h-[87vh] flex-col overflow-y-auto text-center p-3 mt-2 max-mobile:mr-2 max-mobile:w-[78vw]">
+        <img
+          src="/profile.webp"
+          alt="profile"
+          className="w-[100px] ml-9 mt-6 mb-4"
+        />
         <Timeline />
       </div>
     </div>
