@@ -31,7 +31,7 @@ const Home = () => {
         <img
           src="/profile.webp"
           alt="profile"
-          className="w-[100px] ml-8 mt-6 mb-4 max-mobile:ml-6"
+          className="w-[100px] ml-8 mt-3 mb-2 max-mobile:ml-6"
         />
         <Timeline prop={prop} />
       </div>

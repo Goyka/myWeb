@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { startTransition, useState } from "react";
 import { GoZap, GoGlobe } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
 import Modal from "./Modal";
@@ -8,7 +8,9 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
 
   const modalHandler = () => {
-    setToggle(!toggle);
+    startTransition(() => {
+      setToggle(!toggle);
+    });
   };
 
   return (

@@ -49,13 +49,13 @@ const Timeline: React.FC<TimelineProps> = ({ prop }) => {
       {posts.map((item) => (
         <div
           key={item.id}
-          className="py-2 px-3 text-slate-800 flex flex-col justify-start items-start max-mobile:px-1"
+          className="py-3 px-2 text-slate-800 flex flex-col justify-start items-start max-mobile:px-1"
         >
-          <span className="font-semibold text-lg ml-[26px] mb-2 max-mobile:ml-[14px] max-mobile:text-sm max-smallphone:text-sm max-mobile:font-bold max-smallphone:font-bold">
+          <span className="font-semibold text-lg ml-[20px] mb-2 max-mobile:ml-[14px] max-mobile:text-sm max-smallphone:text-sm max-mobile:font-bold max-smallphone:font-bold">
             {item.title}
           </span>
           <pre className="flex flex-col text-left">
-            <p className="font-medium px-6 ml-1 text-sm mt-1 max-mobile:text-xs max-mobile:px-2">
+            <p className="font-medium px-6 text-sm mt-1 max-mobile:text-xs max-mobile:px-2">
               {item.content}
             </p>
           </pre>
