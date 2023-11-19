@@ -147,7 +147,7 @@ const AddPost = () => {
           value={content}
           onChange={(e) => setContent(e.target.value)}
           placeholder=" content"
-          className="w-[80vw] h-[60vh] border-2 rounded-md font-medium"
+          className="w-[80vw] h-[54vh] border-2 rounded-md font-medium max-smallphone:h-[51vh] max-mobile:h-[54vh]"
         />
         <button
           onClick={onSubmitHandler}
