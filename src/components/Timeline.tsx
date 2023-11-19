@@ -38,13 +38,13 @@ const Timeline = () => {
       {posts.map((item) => (
         <div
           key={item.id}
-          className="py-4 px-3 text-slate-800 flex flex-col justify-start items-start"
+          className="py-2 px-3 text-slate-800 flex flex-col justify-start items-start"
         >
           <span className="font-semibold text-xl ml-[26px] mb-2">
             {item.title}
           </span>
           <pre className="flex flex-col text-left">
-            <p className="font-medium px-6 ml-1 text-md mt-1 ">
+            <p className="font-medium px-6 ml-1 text-sm mt-1 ">
               {item.content}
             </p>
           </pre>
