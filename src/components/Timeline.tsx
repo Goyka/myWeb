@@ -30,12 +30,13 @@ const Timeline: React.FC<TimelineProps> = ({ prop }) => {
         const res = await getDocs(postsQuery);
         const datas = res.docs.map((doc) => {
           const { title, content, createdAt } = doc.data();
-          return {
+          const myData = {
             id: doc.id,
             title,
             content,
             createdAt,
           };
+          return myData;
         });
         setPosts(datas);
       } catch (error) {
