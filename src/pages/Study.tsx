@@ -12,9 +12,13 @@ const Study = () => {
           <Link to={"/project"}>project</Link>
         </div>
         <div>
-          <a href="https://www.notion.so/goyaresume/707d9a851a7f4666a1815e8ee0e016f5">
+          <Link
+            to={
+              "https://www.notion.so/goyaresume/707d9a851a7f4666a1815e8ee0e016f5"
+            }
+          >
             resume
-          </a>
+          </Link>
         </div>
         <Link to={"/study"}>study</Link>
         {!token ? (

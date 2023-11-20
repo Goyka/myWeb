@@ -1,6 +1,7 @@
+import { memo, useEffect, useState, useMemo } from "react";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
-import { useEffect, useState } from "react";
 import { db } from "../Firebase";
+import { Link } from "react-router-dom";
 
 export interface Posts {
   id: string;
@@ -13,12 +14,12 @@ interface TimelineProps {
   prop: string;
 }
 
-const Timeline: React.FC<TimelineProps> = ({ prop }) => {
+const Timeline: React.FC<TimelineProps> = memo(({ prop }) => {
   const [posts, setPosts] = useState<Posts[]>([]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [prop]);
 
   const fetchData = async () => {
     if (prop) {
@@ -44,9 +45,12 @@ const Timeline: React.FC<TimelineProps> = ({ prop }) => {
       }
     }
   };
+
+  const memoizedPosts = useMemo(() => posts, [posts]);
+
   return (
     <>
-      {posts.map((item) => (
+      {memoizedPosts.map((item) => (
         <div
           key={item.id}
           className="py-3 px-2 text-slate-800 flex flex-col justify-start items-start max-mobile:px-1"
@@ -56,13 +60,29 @@ const Timeline: React.FC<TimelineProps> = ({ prop }) => {
           </span>
           <pre className="flex flex-col text-left">
             <p className="font-medium px-6 text-sm mt-1 max-mobile:text-xs max-mobile:px-2">
-              {item.content}
+              {/* content 내용에서 링크가 있으면 활성화 */}
+              {item.content.includes("http")
+                ? item.content.split(" ").map((word, index) =>
+                    word.startsWith("http") ? (
+                      <Link
+                        key={index}
+                        to={word}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {word}
+                      </Link>
+                    ) : (
+                      <span key={index}>{word} </span>
+                    )
+                  )
+                : item.content}
             </p>
           </pre>
         </div>
       ))}
     </>
   );
-};
+});
 
 export default Timeline;
