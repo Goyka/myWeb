@@ -60,17 +60,17 @@ const Timeline: React.FC<TimelineProps> = memo(({ prop }) => {
           </span>
           <pre className="flex flex-col text-left">
             <p className="font-medium px-6 text-sm mt-1 max-mobile:text-xs max-mobile:px-2">
-              {/* content 내용에서 링크가 있으면 활성화 */}
-              {item.content.includes("http")
+              {item.content.includes("https")
                 ? item.content.split(" ").map((word, index) =>
-                    word.startsWith("http") ? (
+                    word.startsWith("https") ? (
                       <Link
                         key={index}
                         to={word}
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="text-slate-500"
                       >
-                        {word}
+                        <span>↘︎ {word} </span>
                       </Link>
                     ) : (
                       <span key={index}>{word} </span>
