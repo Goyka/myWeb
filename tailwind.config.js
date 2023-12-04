@@ -16,5 +16,5 @@ export default {
       pretendard: ["Pretendard-Bold"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };
