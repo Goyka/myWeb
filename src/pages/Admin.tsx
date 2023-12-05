@@ -19,7 +19,7 @@ const Admin = () => {
     if (adminCode === "goyka" && password === "220605") {
       sessionStorage.setItem("adminKey", adminKey);
     } else {
-      alert("잘못 된 접근입니다. 메인 페이지로 안내합니다.");
+      alert("잘못된 접근입니다. 메인 페이지로 안내합니다.");
       navigate("/");
     }
     setAdminCode("");
