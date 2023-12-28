@@ -14,7 +14,7 @@ const Home = () => {
         <div>
           <Link
             to={
-              "https://www.notion.so/goyaresume/707d9a851a7f4666a1815e8ee0e016f5"
+              "https://goyaresume.notion.site/1978d2dfe61243bc877ab136d129af64?pvs=4"
             }
           >
             resume
