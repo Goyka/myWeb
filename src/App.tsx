@@ -3,11 +3,11 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="flex-col w-[100vw] h-[100vh] items-center justify-center fixed">
-      <div className="h-[7vh] w-[100%] my-2 px-3 relative z-10">
+    <div className="w-[100vw] h-[100vh] overflow-hidden">
+      <div className=" w-[100vw] h-[10vh]">
         <Header />
       </div>
-      <div className="h-[40vh] px-2 fixed">
+      <div className="h-[90vh]">
         <Outlet />
       </div>
     </div>
