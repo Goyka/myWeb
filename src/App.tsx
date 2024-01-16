@@ -3,11 +3,11 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="w-[100vw] h-[100vh] overflow-hidden">
-      <div className=" w-[100vw] h-[10vh]">
+    <div className="w-[100vw] h-[100vh] overflow-hidden fixed">
+      <div className=" w-[100vw] h-[8vh] animate-fadeIn">
         <Header />
       </div>
-      <div className="h-[90vh]">
+      <div className="h-[90vh] animate-fadeIn">
         <Outlet />
       </div>
     </div>

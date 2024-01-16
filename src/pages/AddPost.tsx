@@ -63,7 +63,7 @@ const AddPost = () => {
   };
 
   return (
-    <div className="bg-slate-50 rounded-xl w-[98vw] h-[87vh] flex-col mx-2 p-5 mt-2 max-tablet:w-[96vw] max-mobile:mr-2 max-mobile:w-[92vw]">
+    <div className="w-[98vw] h-[87vh] flex-col mx-2 p-5 mt-2">
       <div className="flex flex-col gap-2 items-center justify-center">
         <div className="flex items-center gap-2 mb-2">
           {category === "home" && (
@@ -151,7 +151,7 @@ const AddPost = () => {
         />
         <button
           onClick={onSubmitHandler}
-          className="bg-slate-800 text-slate-50 font-semibold w-[95px] h-[35px] mt-2 rounded-lg"
+          className="bg-slate-600 text-slate-50 font-medium w-[95px] h-[35px] mt-2 rounded-full"
         >
           post
         </button>

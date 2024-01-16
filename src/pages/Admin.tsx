@@ -27,7 +27,7 @@ const Admin = () => {
     navigate("/");
   };
   return (
-    <div className="flex flex-col justify-center items-center w-[96vw] h-[77vh] gap-1.5 text-sm font-semibold">
+    <div className="flex flex-col justify-center items-center w-[96vw] h-[77vh] gap-1.5 text-sm text-slate-800 font-semibold">
       <label htmlFor="id">관리자 코드</label>
       <input
         type="text"
@@ -48,7 +48,7 @@ const Admin = () => {
       />
       <button
         onClick={loginHandler}
-        className="bg-slate-800 text-slate-50 font-semibold w-[95px] h-[35px] mt-2 rounded-lg"
+        className="bg-slate-600 text-slate-50 font-semibold w-[95px] h-[35px] mt-2 rounded-full"
       >
         admin
       </button>
